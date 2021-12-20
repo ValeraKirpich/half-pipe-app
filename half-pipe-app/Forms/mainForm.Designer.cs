@@ -38,8 +38,10 @@ namespace half_pipe_app
             this.panelTitle = new System.Windows.Forms.Panel();
             this.panelLabelText = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelTitle.SuspendLayout();
+            this.panelDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -128,11 +130,21 @@ namespace half_pipe_app
             // 
             // panelDesktop
             // 
+            this.panelDesktop.Controls.Add(this.button1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(150, 34);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1242, 538);
             this.panelDesktop.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(321, 142);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(635, 153);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "БАТОН";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // mainForm
             // 
@@ -148,6 +160,7 @@ namespace half_pipe_app
             this.panelMenu.ResumeLayout(false);
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
+            this.panelDesktop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -162,6 +175,7 @@ namespace half_pipe_app
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label panelLabelText;
         private System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.Button button1;
     }
 }
 
