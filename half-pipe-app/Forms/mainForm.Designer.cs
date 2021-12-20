@@ -34,10 +34,10 @@ namespace half_pipe_app
             this.button3 = new System.Windows.Forms.Button();
             this.buttonProducts = new System.Windows.Forms.Button();
             this.buttonBuyers = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.panelLabelText = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +95,16 @@ namespace half_pipe_app
             this.buttonBuyers.UseVisualStyleBackColor = false;
             this.buttonBuyers.Click += new System.EventHandler(this.buttonBuyers_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(150, 148);
+            this.panel1.TabIndex = 3;
+            // 
             // panelTitle
             // 
             this.panelTitle.BackColor = System.Drawing.Color.SandyBrown;
@@ -123,16 +133,6 @@ namespace half_pipe_app
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1242, 538);
             this.panelDesktop.TabIndex = 3;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 148);
-            this.panel1.TabIndex = 3;
             // 
             // mainForm
             // 
