@@ -1,0 +1,13 @@
+L:\Projects\half-pipe\half-pipe-app\half-pipe-app\bin\Debug\Database1.mdf
+L:\Projects\half-pipe\half-pipe-app\half-pipe-app\bin\Debug\Database1_log.ldf
+L:\Projects\half-pipe\half-pipe-app\half-pipe-app\bin\Debug\half-pipe-app.exe.config
+L:\Projects\half-pipe\half-pipe-app\half-pipe-app\bin\Debug\half-pipe-app.exe
+L:\Projects\half-pipe\half-pipe-app\half-pipe-app\bin\Debug\half-pipe-app.pdb
+L:\Projects\half-pipe\half-pipe-app\half-pipe-app\obj\Debug\half-pipe-app.csprojAssemblyReference.cache
+L:\Projects\half-pipe\half-pipe-app\half-pipe-app\obj\Debug\half_pipe_app.Properties.Resources.resources
+L:\Projects\half-pipe\half-pipe-app\half-pipe-app\obj\Debug\half-pipe-app.csproj.GenerateResource.cache
+L:\Projects\half-pipe\half-pipe-app\half-pipe-app\obj\Debug\half-pipe-app.csproj.CoreCompileInputs.cache
+L:\Projects\half-pipe\half-pipe-app\half-pipe-app\obj\Debug\half-pipe-app.exe
+L:\Projects\half-pipe\half-pipe-app\half-pipe-app\obj\Debug\half-pipe-app.pdb
+L:\Projects\half-pipe\half-pipe-app\half-pipe-app\obj\Debug\half_pipe_app.mainForm.resources
+L:\Projects\half-pipe\half-pipe-app\half-pipe-app\obj\Debug\half_pipe_app.Forms.Buyers.FormBuyersList.resources
