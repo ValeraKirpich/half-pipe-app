@@ -30,47 +30,31 @@ namespace half_pipe_app.Forms.Buyers
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tESTTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet1 = new half_pipe_app.Database1DataSet1();
-            this.buttonEdit = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.database1DataSet11 = new half_pipe_app.Database1DataSet1();
-            this.database1DataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet2 = new half_pipe_app.Database1DataSet();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.buyersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet = new half_pipe_app.Database1DataSet();
             this.buyersTableAdapter = new half_pipe_app.Database1DataSetTableAdapters.BuyersTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.tESTTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet2)).BeginInit();
+            this.фИОDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.телефонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.паспортDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.дополнительноDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buyersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // database1DataSet1
+            // textBox1
             // 
-            this.database1DataSet1.DataSetName = "Database1DataSet1";
-            this.database1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // buttonEdit
-            // 
-            this.buttonEdit.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonEdit.BackgroundImage = global::half_pipe_app.Properties.Resources.edit;
-            this.buttonEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonEdit.Location = new System.Drawing.Point(42, 12);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(24, 24);
-            this.buttonEdit.TabIndex = 2;
-            this.buttonEdit.UseVisualStyleBackColor = false;
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(533, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(255, 20);
+            this.textBox1.TabIndex = 4;
             // 
             // buttonDelete
             // 
@@ -83,13 +67,16 @@ namespace half_pipe_app.Forms.Buyers
             this.buttonDelete.TabIndex = 3;
             this.buttonDelete.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // buttonEdit
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(533, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 20);
-            this.textBox1.TabIndex = 4;
+            this.buttonEdit.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonEdit.BackgroundImage = global::half_pipe_app.Properties.Resources.edit;
+            this.buttonEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEdit.Location = new System.Drawing.Point(42, 12);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(24, 24);
+            this.buttonEdit.TabIndex = 2;
+            this.buttonEdit.UseVisualStyleBackColor = false;
             // 
             // buttonAdd
             // 
@@ -102,45 +89,37 @@ namespace half_pipe_app.Forms.Buyers
             this.buttonAdd.Size = new System.Drawing.Size(24, 24);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView.AutoGenerateColumns = false;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.fIODataGridViewTextBoxColumn,
-            this.telephoneDataGridViewTextBoxColumn,
-            this.passportDataGridViewTextBoxColumn,
-            this.otherDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.buyersBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 42);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 396);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // database1DataSet11
-            // 
-            this.database1DataSet11.DataSetName = "Database1DataSet1";
-            this.database1DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // database1DataSet2BindingSource
-            // 
-            this.database1DataSet2BindingSource.DataSource = this.database1DataSet2;
-            this.database1DataSet2BindingSource.Position = 0;
-            // 
-            // database1DataSet2
-            // 
-            this.database1DataSet2.DataSetName = "Database1DataSet";
-            this.database1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.фИОDataGridViewTextBoxColumn,
+            this.телефонDataGridViewTextBoxColumn,
+            this.паспортDataGridViewTextBoxColumn,
+            this.дополнительноDataGridViewTextBoxColumn});
+            this.dataGridView.DataSource = this.buyersBindingSource;
+            this.dataGridView.Location = new System.Drawing.Point(12, 42);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.Size = new System.Drawing.Size(776, 396);
+            this.dataGridView.TabIndex = 5;
             // 
             // buyersBindingSource
             // 
             this.buyersBindingSource.DataMember = "Buyers";
-            this.buyersBindingSource.DataSource = this.database1DataSet2;
+            this.buyersBindingSource.DataSource = this.database1DataSet;
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buyersTableAdapter
             // 
@@ -152,29 +131,29 @@ namespace half_pipe_app.Forms.Buyers
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
-            // fIODataGridViewTextBoxColumn
+            // фИОDataGridViewTextBoxColumn
             // 
-            this.fIODataGridViewTextBoxColumn.DataPropertyName = "FIO";
-            this.fIODataGridViewTextBoxColumn.HeaderText = "FIO";
-            this.fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
+            this.фИОDataGridViewTextBoxColumn.DataPropertyName = "ФИО";
+            this.фИОDataGridViewTextBoxColumn.HeaderText = "ФИО";
+            this.фИОDataGridViewTextBoxColumn.Name = "фИОDataGridViewTextBoxColumn";
             // 
-            // telephoneDataGridViewTextBoxColumn
+            // телефонDataGridViewTextBoxColumn
             // 
-            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
-            this.telephoneDataGridViewTextBoxColumn.HeaderText = "Telephone";
-            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
+            this.телефонDataGridViewTextBoxColumn.DataPropertyName = "Телефон";
+            this.телефонDataGridViewTextBoxColumn.HeaderText = "Телефон";
+            this.телефонDataGridViewTextBoxColumn.Name = "телефонDataGridViewTextBoxColumn";
             // 
-            // passportDataGridViewTextBoxColumn
+            // паспортDataGridViewTextBoxColumn
             // 
-            this.passportDataGridViewTextBoxColumn.DataPropertyName = "Passport";
-            this.passportDataGridViewTextBoxColumn.HeaderText = "Passport";
-            this.passportDataGridViewTextBoxColumn.Name = "passportDataGridViewTextBoxColumn";
+            this.паспортDataGridViewTextBoxColumn.DataPropertyName = "Паспорт";
+            this.паспортDataGridViewTextBoxColumn.HeaderText = "Паспорт";
+            this.паспортDataGridViewTextBoxColumn.Name = "паспортDataGridViewTextBoxColumn";
             // 
-            // otherDataGridViewTextBoxColumn
+            // дополнительноDataGridViewTextBoxColumn
             // 
-            this.otherDataGridViewTextBoxColumn.DataPropertyName = "Other";
-            this.otherDataGridViewTextBoxColumn.HeaderText = "Other";
-            this.otherDataGridViewTextBoxColumn.Name = "otherDataGridViewTextBoxColumn";
+            this.дополнительноDataGridViewTextBoxColumn.DataPropertyName = "Дополнительно";
+            this.дополнительноDataGridViewTextBoxColumn.HeaderText = "Дополнительно";
+            this.дополнительноDataGridViewTextBoxColumn.Name = "дополнительноDataGridViewTextBoxColumn";
             // 
             // FormBuyersList
             // 
@@ -182,7 +161,7 @@ namespace half_pipe_app.Forms.Buyers
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonEdit);
@@ -190,35 +169,27 @@ namespace half_pipe_app.Forms.Buyers
             this.Name = "FormBuyersList";
             this.Text = "Покупатели";
             this.Load += new System.EventHandler(this.FormBuyersList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tESTTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buyersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Database1DataSet1 database1DataSet1;
-        private System.Windows.Forms.BindingSource tESTTableBindingSource;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource database1DataSet2BindingSource;
-        private Database1DataSet database1DataSet2;
-        private Database1DataSet1 database1DataSet11;
-        private System.Windows.Forms.BindingSource buyersBindingSource;
-        private Database1DataSetTableAdapters.BuyersTableAdapter buyersTableAdapter;
+        public System.Windows.Forms.DataGridView dataGridView;
+        public Database1DataSet database1DataSet;
+        public System.Windows.Forms.BindingSource buyersBindingSource;
+        public Database1DataSetTableAdapters.BuyersTableAdapter buyersTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fIODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telephoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passportDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn otherDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn фИОDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn телефонDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn паспортDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn дополнительноDataGridViewTextBoxColumn;
     }
 }

@@ -47,7 +47,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -59,6 +61,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database1DataSet.cs">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Database1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -68,6 +73,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Buyers\FormBuyer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Buyers\FormBuyer.Designer.cs">
+      <DependentUpon>FormBuyer.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\mainForm.cs">
       <SubType>Form</SubType>
@@ -83,6 +94,9 @@
     <Compile Include="Forms\Buyers\FormBuyersList.Designer.cs">
       <DependentUpon>FormBuyersList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Buyers\FormBuyer.resx">
+      <DependentUpon>FormBuyer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
     </EmbeddedResource>
